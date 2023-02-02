@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Statistics = ({
   good,
   neutral,
@@ -22,4 +24,12 @@ export const Statistics = ({
       </>
     </div>
   );
+};
+
+Statistics.PropTypes = {
+  good: PropTypes.string.isRequired,
+  neutral: PropTypes.string.isRequired,
+  bad: PropTypes.string.isRequired,
+  total: PropTypes.func.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
 };
